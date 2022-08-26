@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+
+<head>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link type="text/css" href="{}" rel="stylesheet" />
+    
+</head>
+
+<html>
+
+    <body>
+
+        <div id="loading-target"></div>
+
+        <center><div class="conn-hidden" id="conn"><b class='connect-handle'>Invite a friend to join this Orb</b><b class="connect-message">Join using a one-time link:</b><div id="loading-dots" class="dot-elastic"></div></div></center>
+
+        <div id="body-headers" class="global-headers">
+
+            <form id="beta-signup-input" method="get">
+
+                <textarea class="message-box" name="message" id="post-input" placeholder="Send a message.." required=""></textarea>
+
+                <div id="image-area" class="actor-image-area"></div>
+                <div id='submit-button' class='actor'>
+
+                    <div id="post-button">
+                        <img id="post-button" class="post-button" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE9ElEQVRogdXaW4iVVRQH8F86lV2sMK0QepEIoTKtfAh6STEIuoBUNjU2GqQVhHbRSqcorMgg8UJZltfxUtpFE4kILEN9kMrqxW5TURYV9BINA5nRw/5OZ8+e71w956h/OMzal29/+7/32mt9a+05YcaMGY5TTMB0TMTmtqM8mVoxArfiDlwR1c86XogUVn8yTs1p/+RYJjIMtwkELqvQd9mxSKSw+jfgjCr6/4X1xwqRczAFnbg8p30nRmNkTttKHB7UvLlVhUnoxvdYaiCJLbgA2zCkxBhL4WjsyDDcjmnydf9nrMMqfIubsSRq/wNnZ/Jn+I7WEpmAO3G9fN3fjrXZ37+zuofxbNTnOWGHJmflRYWGZhMZLlieaRiX0/4jNggEvkra5uHpqLwAz+D3rNybPYvmEZmEmwQSp+e0bxP0fxP+zWnvEiZewHo8nv2GZnWr42cbSaTS6h8UdL8bX5YZ51H9SWzE1EzuiuoXRXJDiExU1P2hOe3bBNXZoaj7pZDuxDrBJBN8y4mZvE+wdP+jXiIjhNXvVF731+DrKsecZ+BOdEblByP5xfThWolMEhzXFPm6/zbewGvydb8Uyu0EXJT9CJ58gwTVEBmBdqV1/ydB79eqfvVj5J2JzqTP3ZG8Cv+kg5QjcrVAoF3+6r8rWJMtOFR5vrlId2KT4CzTOU6PykvzBkqJDBcsxFSldb9geepZ/Rh5ZyIlIas7LZN3oydvsAKRanR/CzbjcM1THohKZyLGA5H8UqkB2wT1SFeiT/jO2S5Ynm9qnGg5VHMmChiHMZncKxiRXLTJ3873cWPtc6yIdCe6hbC1FOKEwmpltGGQ4A9+TeqvwV7cVdM0yyPvTJQj0abo0Uk8eYpBgqUYJWz5wax+CK7EChzATEWvWg/SD8A865SiXfGQfyzx5CkKgVWf8Lk8CvfqfyZGC4esB3OUDnBKoUt/EhsFLaiEOZH8QqXOaYR4CMtxoUDo86jtfCEe6MFcxeCmHPLORKWdIBzySzK5VzBIZVEu1F2OsdmLP43qR2KhQGiB4PnzUOuZiDErklfK8eQpqonZNwqxdLugqwWcKax4D57CeVFbeiY2qG4nYLBiBAjLqnmoluTDaxgvpGk+jOqHYr4QO3cJRiMm0Y2OGt7ToRgO7Bb8WUXUk0XZLnyHXYcPovpTFMPRAmpRpwJmR/KKah86knTQDiGhMBHv5LS/qnp1KmBs9qOCJ0/RiLzWTuEr4Cp8EdWnTrYazIzkNWr4qm5kgm4Pro3KXUpbtDyknvz5Wl7e6EzjL9galZ+s4dnYk+9RwZOnaEbKdF4k36P6XYk9+eJaX9oMIgewKyp3leoYYYyiJ++TbzzKollJ7PsjeaZgmssh9eSV0kYD0Cwi+/FRJp+sv7qlGIxbovKSUh3LoZnXCrMjea7Su9KhGF7vUaUnT9FMIvuFtD+chEdK9IvV8OV6X9bsi57ZkTw3530X49JM7sXr9b6o2UR2Ke7KENyXtMcmd606DnkBrbh6i1XqiUhuE+7MC1h8JC9pBZH3ZNdjOEtxVzqEs0M45EeUcmrVZWicSZ+f/Y3j9tw0aC1oFZGt+CGTzxWCrfFZuU//77O60Mrr6YciuUNQM0J2ve5DXkAribyJ33LqFzdi8Fb/w8BjSXmfOj15ilYTeQV/RuWFjRr4aPwLR4dwV74XbzVq0P8Ak+z4cN9mtSgAAAAASUVORK5CYII="></img>
+                    </div>
+                    
+                    <input type="file" name="image" id="file" style="display: none;"></input>
+                    
+                    <label for="file">
+                        <img id="media-button" class="media-button" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE5ElEQVRogdXaaaxdUxTA8d+77xWlYgjSVEmJRE2JSMxptEnNQijaUlNIo4RW0Nb0RWOeqoaKIaI0FC0i5jniA0VMwQdiipCYEuUpqvVhnePuc71737nnvb73+v9y9tp3n33XOuvstdde93ZMnz5dwgE4A3tjpKHJT3gL9+HpvLMrGTAfMwdWp0psjDE4HotwCnVD5vu/Ed1YjY4BUa931qCGDZO+k7EBJndhL0UjFuEGfGNoGjISM3BO1n88FndhTjL4IZmrhjC/4Fz8g1lZ3+wa9kkGnT/ASvWFC/Fn1h7bhc0yoRs/l5hgE5yEidgmm+w9PI7n+1HR3lglXv8dMLxLuIhYD+tjZYubJ+NWbNHQv694b5/Cqfix//Rtyer8WhOLiFjUrRb22WINNRqRcjjeV/fy2qaWXdfUWg6rs7PwRM4nOB17YryIcjmjhGcGlK7eh4Dbk/ZLYn2kvCaUfzmT98Vhkp13bVPGI6NF6gJ/4agm417BvESe0Qe92qaMIbsn7Wfxe4uxd6mvuV0q6lSJMoZslLS/6WXsz+qRZL1KGlWkjCHfJu39exm7Gzqz9i+VNKpIGUPeFWuDeM0ObjH2yqT9SkWdKlHGkG7F8LoUhzaMGY5bMCHpu6lvqrVH2fB7KaaJlGQjEVZfF6nJCGFYehC7CF9U0GeKCNudIqTfWfbGsoasxji8KHIbmTyuh7ELcHVZBRKWiJQ85wRMVfRyU8ru7PCVCKkL9ByC3xNPtMop8xlFI3LGK5kllPVIzl9C0XkiPRkjkswP8Xabc+U8hkMSeRZW4J5MPgxX4JJWk7RrSM6P4in2lWcVo+BM4XHYHNdl7YvxDpY1m6idV6u/WaZoxIXqRsD1eDiRl2LHZpMNliFP4uhEPlco3shkfJTIr2JYTxMOhiFLcUQiXyD2oGaMx69Ze6TiKTTPIgbckGdwTCKfpbjZ9sRPiseG8bgqa3fnnVUM2QrbV7j3UcXoNBsLS967XBidM1fsM1/mHe0os6lYfF/h82yS80re+zQmJfJM9YhUloW4I5EXS5LYsoaMFWfx40Rlj0hXbhQFvVYsU8zN5ipGp3aYIeq+OZvmjTKGHIUPsG3S92nSPglv6Lko8YRidJqFa0p8Zysm4PvGzt4MOVPUq/KQt0KUWHdSX3Cwn/DYHknfIzgykefg5nY0bkI3DmzsbDSkM2nfprgYPxa51vJMvlgsuJxRYvedhrtxbPLZObi2itZN+EjkdXlNrmDIMBHqiPc6jRIviENV41H3QVFyTU+D94tSUc5sxVJSf7FEk6j1NbYTJZ30vb4FB+HvJhO+KTz1Zg+fnaf96NQOq/JGasgmwmVp/j9XpA+98Z3wzJKGe+dXVrEc/y2FNPvdsmHQJC2yzSZMwXP4TSz2AaOnNP4HEfffqTjnvdXVqU5j1FouSjpVjRg0Uo+sFKXRPwZJlz6ReuRvzSPTkKfW0B4xWIr0lcE86vYrNfVfqdaoV9LXFfKCeUdNfVOpqdd41xVyJ9Rq6ufh4Yo/IawLbJ1d/6yp7xkduHxw9KnEZep/5/ispnj4nyEOPqMHWqs22EoUydOHvqAj+5vTAzgx+eAfcTZfZehEttViPY8W/wfIeQkT8519mlB4aiZ3ikrJUOc5WWUmTVFOEAXl07Cr5GA/xFghfudfLElQ/wXdMuSjj21MYQAAAABJRU5ErkJggg=="></img>
+                    </label>
+
+                    <div id='toggle-expand' class="expand-div" onpointerdown="toggle_post_box()">
+                        <img id="expand-button" class="toggle-expand" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACmElEQVRoge2ZvXLTQBDHf9akhqegoYIkxuEZcGySF+AzZijpaalpIcYaXoBvGgpeIIBDQcFMAAtmMnRgoE1sitMNitiTT9YpuvHo1/lWZ+3fe7u3d25Mp1MWgaBqB1xRC/GNWohv1EJ8oxbiGwsjpNHr9QBuAaeAR8DrSj2ypwlcBr4Dd5aAe8CN2HgTuAaElbhmzzrwPPF5OeCfCM0A2Do2l/LT5agIgI0A+CA8vA1cKt2l/HSBp8L4fgB0gLFgfAhcL82l/JhETIBOAIyAM8Af4aE+cLUsz3LQRhYBsAoMdfn9CiwjR2ZAtZHpAC+E8QnQAnbh6D7yCTiLLKZPNWK6wDNhfIKKxI4eSG+IEao+j4XJxy0mKyfOE0dCI+3sOjKmnLlSzD8rNpFFHKB+6J20wdSiRJhzJkRtmmXRRnUYaSbAGjCUJmX1WjoyvwTbA8oRs46c2FNUJN6ZJs5qGiNgBbMYlznT4f8dW2OMhMam+/2M2mfGgq0P9Cy+YxYXsaxOJmzb+AiVM1Jk7lOsALSBJwZbi4zllCTPeUR3AL8FW8h8HcAGck4coCLx1vaL8h6sovgFkpgB+cS0gccGm3UkNPOcEPcw54ztEaCLue1oMiOxJeY96o4wV7NtsnMmqwFcI8dySlLkzP4Ftc/8EGwhcjXbxJwTTeDNvM4UvXzQkZFyJl3NLiDv2FAgEpqlIpNjIlRkhsDJlC0E9lFL8KUw9xDVAOZKbAkXQkAtsxWUmBMp26uMeavAexcOuLzX0h3AT4tnD4FzOBIB7i/osnImSYsCiS1Rxk3jCHM105EonBNpyroy1aV5nBjTDaDTSGhcJbvEN+A0cDt+z13gY1kva9R/T3tGLcQ3aiG+UQvxjVqIbyyMkL8QG5DcpwMSpwAAAABJRU5ErkJggg=="></img>
+                    </div>
+
+                </div>
+
+            </form>
+
+        </div>
+
+        <div id="global-east-panel" class="global-east-panel">
+
+            <!-- This is where posts go -->
+            <div id="posts"></div>
+            <!-- End of posts -->
+
+            <div id="loading-icon" class="loading-icon">
+                <center>
+                    <img src=""><b>Communicating</br>with onions..</b></img>
+                </center>
+            </div>
+
+        </div>
+
+        <div id="navigation-panel" class="navigation-panel">
+
+            <div id="home-button">
+                <img id="home-button-icon" class="home-button" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAACdUlEQVRoge3Zu2tUQRjG4SfregHBSuwsxUJt/AO8oJXYmWhS2IgEr7URwcpClFjEJFZaeomixEIsDGojNmoZENJYWIpiIRYRi92QuJ6zc/acmZwY/MEpduab/b53Z9+Z2dm+4eFhidiNi9iDBt5iFK9SJGukeFMM4B36sQWbcRgvcTpFwhRCBjHVpX8S52InjS2kH/cKxN3EmZiJYwoZwsMe4idE/JrFEnIUd0uMm8TZGAXEEDKIBxXGj4vgmapCinoiRGXPVBHSqydCTOB82cFlhQwo54kQY0p6poyQId33iaqM41Svg3oV0i/NTHRyS4+e6UVIbE+E6MkzRYWk8kSIwp4pIiS1J0KMKzAzISF1zUQnYwKe6SYkdIpdbrqezfKEDIizY8cm92yWJaRuT4TI9EynkJXiiRB/eWapkJXmiRB/7DMLQo5YmZ4IMaa9ADSxE49qLacak5ht4FrdlUTgegN7664iAjsaWFN3FRHoW7gB/NeZa2Ck7ioicGlhRk7WXUkFRjDdbL+4jTda97PbtS6et9VUWIhPmMEcnmvdMWsuCZhtP3AVF5azuh6YwYnOxrzT76a0tVRiY1ZjnpC+hIVUJbO2VP+PLDvNcEgpHuMZflr8sH5hHfbheOyEKYRM4ViX/jv4qsL1aBYpvlqjBWJuxE6aQkiRhWJD7KQphKwvELM2dtJVs2r9F7LSWPVCVs0RJfqqEpHMTTxPyPeEhVTlR1ZjnpAnCQupytOsxjwhr/GhZKIitzJlb27mcD+ro9uqddDiL8bYzJcY8xkH8jq7nX6/YBeu4BC2BuLhffsJ8RHT2K/7CjmvJeAFLuNbXuBv5tRdwdyoqgMAAAAASUVORK5CYII="></img>
+            </div>
+
+            <div id="connect-button">
+                <img id="conn-button" class="connect-button" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAEaElEQVRogdXaW+gUZRjH8c9/WzvYCSotMS3SMkvJsnNZkBFBYViYF0UmhVmUnQjFoIjKootOghVlpRddmEbYwS4iypKSsgslIROyMisxo4OhWX+7eHb7z3+dnd3ZGQ99YdjZ2XeeZ37zvvO+z/PMdk2ZMkUJHIAJuAQn4xhUsQGr8REW4tsynKVRLcHG7ZiBo1J+G1bbxuMxzMb9+K0Ev72oFDj3SHyMJ6WLaGQf3IG1uKCA31Q6FXI4VuDsDs7thw8wtkPfqXQipEv0xMCCvt/F0QVt/EcnQp7C8SX5f70kO7mFDMBtZTnHaDERFCavkGllOG3g3jKM5BVyZRlOGxiNQUWN5BHSDycUddiE04oayCNkeFFnGQwoaiCPkAOLOstgv6IG8gj5uaizDP4oaiCPkC+wvajDJhQOJvMI2YLPizpMoRufFTWSd/qdX9RhCm/il6JG8gqZi61FnTbwQBlG8grZptwQZZ6ShmsnQeMLWFCC768xuQQ76DwfmYi3CvhdJ3KZHQVs9KJIhng5nujgvLcxChsz2vTHmSL5GqONtKGIELgLZ2FxG20/FQWKy/BrkzbXYAm+wXKRfC3FGrGOPaRJWt1VUhWFCCgvwggMQR98h1VYVruwZozCs+KmtOJPUeyYnTzYSRVlMGaK+OhubK4dX1PbWlERi2CdK+TLFPviaZyOSUmj7XIwHsFXuAnXi4rIg+KOtmIYHsZJiWPn6TzdvU7MoGh/aI3HHNlln1WisrIO34u73l/04Ck4Fz/gOLGoVsWz0jengEbG4Y12htajmN5Gu5G1LYtJeiKDGbJFdGOReOaycqEX0a+VkNeUVBzA72IWIiaCGS3aT8XzYviv1zz5OgITs4QswaXtX2dLVupZAM/XOlH7svbZrXXidVUzIfOUK4J4huo0K5luFb2wWUzddWaKguAEnJhy3sg0IXeKGaFsNiT2mw2TW/BSyvHnap/3YZMo2SYZ3Dj9DsHjea+wTboS+6XFWHV7jT2ysGQHSZK98FOTNnNwqhha80SETKxbA3G1nXsD1ieFTNDewtYpIxL7S5u02V9PvvOeHiGzcFiG7ZXJobWrhlSdUYn9D0XMlMXQxP62Fm0X1YWMUWKJvwkH4eLa/nax0GbxjAhBVsgu4G3CgrqQm4tcYQ6Si+As2b2yL27Qupw6GTsqYlyOK3R57TNWT6j+j3h5WoS5ogqjgjPs2nJoI68m9peJML4T5uPG+pcKLixwUZ0wCC8nvi8W+fsnbZ6/ReRBk5IHKyJP2N1MEq/w6izHOSLVfUd67aye6g6VMsNWxWvmPcE0sTbcqieHf6W29cexIpn7S+Qxa7OMVZX3YrMTrhUP/HS9h9tG2VWWnaiIeH5P0l8EiqtF+XQsDm1o00csqFM1WVOqegdze5LhIrol/uLxo3iwq+Jm1wW8L4ZaL6p6VzT2Fg6pbWmkLqJFC3R7gtQRVBGhwP+J1JtfUcKLyN3M32kHqyKQu8fe3zPdIgrYkPbjv0VwvXuCF5gmAAAAAElFTkSuQmCC"></img>
+            </div>
+
+            <div id="logou-button">
+                <img id="logout-button" class="logout-button" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAC
+                tElEQVRoge3auWsVURTH8U8SoxG3uCNaWGglLlgYtVHQQoUgCII2VvpS+AdYWdnZ2Fi4FGIXwU7t
+                LFwKN0S0MYWNKIImhSsukcTiziMv47xlfPPeu0K+MMx2zz33N3PP3HNnpqtUKi3FW/SJgxfYnNeo
+                G2PiEQGbcDWvUXcLGlIEh/IaxCrkc16DWQU6H8dd3EYvNmIV5tSwmUyW7RnHc1GkkF4hSO/iHL7l
+                sP2J2c04L7prLccZfBWu6ijmNWDX06zjVsfIMkFUPT9dzTpqV7CvbbWDdglpuuvUo11CfrfaQazj
+                SG5mhLSY3E+xWISk27GgYnshzmNLngo6RToLuJes1+ATTuIZLlarIBYhqyq2P2Mw2X6ZKlfChawK
+                YhHyRYiLHiwylTSOZJQdkiEmFiFlJlL7A1XKDeFy5YHYhKSZEO7Ux4xzx3GpvFNkGp+XOVgnzGNq
+                zT/GsAdPM86dSGyHOiXkAG4VVFcJ7zvRtboUJ6LM6dhjpGE6IWQSpwqu82anYuQsrmADfqkd7KOY
+                L4zsWTzAYCefWqO402DZ51WOP8ROOvv4bZRx2e18iB3lndiD/YZsEY9UiCAeIb1Cljtp+sC3N6Ps
+                E3+/0ItGyBth3gFbTaUe6QY/xrasCmIRsjK1fyRZPxdeJd3EQdWTyGiCfcL0i/q1Yvu1qflJVWK5
+                I2nS6XxdYhWSmxkhsTEjJDZmhOTkbZ3z4806aNeAeF9I2dPfScofQ2t9MG2IdgkZUCO9yOC/fYmd
+                ZkH9ItOJVciDvAbdWN+ChjTDJ+zLa9SNV0KfXI3DuJZUViS7hIDuq7HMTcr0a/LPh3e4nixlVmA/
+                jgkTnv68DhJGhLclLaNejHwQfjnag8XCnVuOo8KvGj8b9PP9XxvYKP8S7GMYxm6hS3RhifBr0m38
+                SJUfFr5/tJQ/Wi1qWLSlpmkAAAAASUVORK5CYII="></img>
+            </div>
+
+            <div id="hand-button">
+                <img id="hand-button-icon" class="left-hand" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAETElEQVRoge3aachUVRgH8N+bS+6pqVFCEEZCCygVIX2oQAmitJXALKggKdqgD0VIGiJRkERfwiwKEyppU4koCrMsDLFVpc00wYiszKKFgt4+nHOdmfPO3Jk5M+/bEP3h8j/3Oct9/vOce+95zp2+/v5+9bB48eK69hZwGpbjAvRjA5bgs9wB62HVqlU158O7OThOwUfoq7JdjgWx7osuX+8wjuig77nYiH3YgbvwtCDidZwqRGczRuBZITI78TXWY04H169BbkSuwLrEdl/knzCvyr4A32N2PAocj/mxfkOmH4eRE5GpKiKewDlYKAggRKgah3Awlg/iythnbbStx9EZftQgJyKXRN6G66rsw/AUjkzaj6qyXYVXYvktYWrNwFxh6mUjJyLTI29N7Dsjj0jsfRgdyx8mdTsiT8rwowY5Qv6MPDaxjyvpUzzjj0rsRaT+yvCjBjlCCqf6Ent6Xg+N+tR/mbWBHCEHmzcZerRys88QHpHT8ClOGlSPMtFMyNVYMxSOdIqyqTVbRcTLuBfvD7pHmSgTsizyGlwYz0/Hu4PrUh7KhJwX+bHE/twg+dIRyoQUj8b0/ZC+8HoCZUKKl1T6QOj20r8r6GQZ31P4X0iv4T8jpCdv3IjxQhLXjx/wc1njXonIyKryPLwopMe78ZWQfW7FUkysN0CvRGRX5LVCFpmiD2fF42Zh42NndYNeicgJeFxFxEphrTdJyOdnYpGQHk8R9gpq8G9HpEionoz8q5C/p2n0j/gcH8fjzHSgHCETI6dp65jIaf7dp3IPjEzq0sxwDj5pcN2xeCaW30krc6bWe5HTLdDifG9i/wN7YvmbpG5YVXmBxiJgC06O489PK8siUlwk/dWex4kGOrxHmOuHEvvfwnyfiANJ3eTILyjfpHsIs4SNj7OFqVaDMiG/Y4LaX63A7gZ99jawHzJQIKzAZbixxI+5uC2WLzIwqigXsg/HGLjt0028FI9GGC7MAHgYrzVqWHaPFNNgTEmbwcaDwqzYrxKVuigT8kvkUV1yql0ci1tj+fpmjcuEFPtXo0vaDCYeibwJrzZrXCbk28jHdepRBmYKj2O4oZUOZUL2R57VgUO5WB55I75spUOZkA8in9GJRxmYIHxIgnta7VQmZLtww4/TxU9kLaD48rXNwM8QDdFsiVK8bRdmOJSDqbgplm9vp2MzIasjX2to9rMejfymNnc0mwnZLCwJxipfRnQDc3FxLDd9b6RoZfW7LPJSrX3MycFola3YlUJ62xZaEbJaWHdNVkmAuo11Qn6zB3fkDNBqPnJp5GuE1Wo3sUjY7SesbrPQqpDtwpKbMAWml7RtB9OET9pwp2RDoR20kyEuwduxfH/uBRPcHXkLHuhkoHZT3Vsiz8/oWw/nR15R2qoFtOtMkZ2NN/AfDjkoNiN+63SgdoVUZ4vdeBRPiTzk/3w4IKyKdwm7I53iDXwnfPbuCP8Aweiw3AcnSAoAAAAASUVORK5CYII="></img>
+            </div>
+            
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script type="text/javascript" src="{}"></script>
+    
+</html>

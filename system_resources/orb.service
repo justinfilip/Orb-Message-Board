@@ -1,0 +1,8 @@
+[Unit]
+After=network.service
+
+[Service]
+ExecStart=/root/Orb-Message-Board/system_resources/start_orb.sh
+
+[Install]
+WantedBy=default.target

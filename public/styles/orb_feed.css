@@ -1,0 +1,1641 @@
+/* 
+ .d8888b.  888       .d88888b.  888888b.          d8888 888      
+d88P  Y88b 888      d88P" "Y88b 888  "88b        d88888 888      
+888    888 888      888     888 888  .88P       d88P888 888      
+888        888      888     888 8888888K.      d88P 888 888      
+888  88888 888      888     888 888  "Y88b    d88P  888 888      
+888    888 888      888     888 888    888   d88P   888 888      
+Y88b  d88P 888      Y88b. .d88P 888   d88P  d8888888888 888      
+ "Y8888P88 88888888  "Y88888P"  8888888P"  d88P     888 88888888  
+*/
+
+/* GLOBAL */
+
+* {
+
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid #ff0000; */
+    
+
+}
+
+.none {
+
+    display: none;
+
+}
+
+.hidden {
+
+    height: 0px;
+    width: 100%;
+    opacity: 0%;
+
+}
+
+html body {
+
+    /* background-color: #ffffff; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    font-weight: 350;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    color: #717070;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+    
+}
+
+textarea {
+
+    border-style: none;
+    border-color: Transparent;
+    overflow: auto;
+
+}
+
+/* CONTAINERS */
+
+.global-east-panel {
+
+    position: relative;
+    max-width: 1000px;
+    height: 100%;
+    opacity: 100%;
+    overflow: auto;
+    overflow-x:hidden;
+    padding-top: 85px;
+    padding-bottom: 55px;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: .2s;
+
+}
+
+.global-east-panel-lowered {
+
+    position: relative;
+    max-width: 1000px;
+    height: 100%;
+    opacity: 100%;
+    overflow: auto;
+    overflow-x:hidden;
+    padding-top: 445px;
+    padding-bottom: 55px;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: .2s;
+
+}
+
+.global-east-panel-hidden {
+
+    position: relative;
+    max-width: 1000px;
+    height: 0px;
+    opacity: 0%;
+    overflow: auto;
+    overflow-x:hidden;
+    padding-top: 85px;
+    padding-bottom: 55px;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: .0s;
+
+}
+
+.global-comment-panel {
+
+    position: relative;
+    max-width: 1000px;
+    height: auto;
+    opacity: 100%;
+    overflow: auto;
+    overflow-x:hidden;
+    margin-top: -165px;
+    padding-bottom: 55px;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: .2s;
+
+}
+
+.global-comment-panel-lowered {
+
+    position: relative;
+    max-width: 1000px;
+    height: 100%;
+    opacity: 100%;
+    overflow: auto;
+    overflow-x:hidden;
+    padding-top: 195px;
+    padding-bottom: 55px;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: .2s;
+
+}
+
+.global-comment-panel-hidden {
+
+    position: relative;
+    max-width: 1000px;
+    height: 0px;
+    opacity: 0%;
+    overflow: auto;
+    overflow-x:hidden;
+    padding-top: 85px;
+    padding-bottom: 55px;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    transition: .0s;
+
+}
+
+.global-headers {
+
+    position: fixed;
+    max-width: 1000px;
+    margin-top: 0px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 7px;
+    border-radius: 13px 13px 13px 13px;
+    background-color: #fcfcfc;
+    border: 0.2px outset #f0f0f0;
+    z-index: 999;
+    opacity: 100%;
+    transition: .1s;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+.global-headers-hidden {
+
+    position: fixed;
+    max-width: 1000px;
+    height: 0;
+    top: 0;
+    margin-top: -1000px;
+    left: 0;
+    width: 100%;
+    padding-bottom: 7px;
+    border-radius: 0px 0px 13px 13px;
+    background-color: #fcfcfc;
+    border: 0.2px outset #f0f0f0;
+    z-index: 999;
+    opacity: 0%;
+    transition: .1s;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+.global-east-content-container-loaded {
+
+    position: relative;
+    background-color: #fcfcfc;
+    color: #717070;
+    padding: 8px;
+    font-size: 13pt;
+    border-radius: 13px 13px 13px 13px;
+    width: 100%;
+    height: auto;
+    min-height: 40px;
+    opacity: 100%;
+    margin-bottom: 5px;
+    border: 0.5px outset #f7f7f7;
+    transition: .2s;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+.global-east-content-container-hidden {
+
+    position: relative;
+    width: 100%;
+    height: 0px;
+    opacity: 0%;
+    transition: .2s;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+.global-east-content-container-gone {
+
+    display:none;
+
+}
+
+/*
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+ 
+*/
+
+/* 
+888       .d88888b.         d8888 8888888b.  8888888 888b    888  .d8888b.  
+888      d88P" "Y88b       d88888 888  "Y88b   888   8888b   888 d88P  Y88b 
+888      888     888      d88P888 888    888   888   88888b  888 888    888 
+888      888     888     d88P 888 888    888   888   888Y88b 888 888        
+888      888     888    d88P  888 888    888   888   888 Y88b888 888  88888 
+888      888     888   d88P   888 888    888   888   888  Y88888 888    888 
+888      Y88b. .d88P  d8888888888 888  .d88P   888   888   Y8888 Y88b  d88P 
+88888888  "Y88888P"  d88P     888 8888888P"  8888888 888    Y888  "Y8888P88  
+*/
+
+/* LOADING */
+
+.loading-icon {
+
+    margin-top: 150px;
+    opacity: 25%;
+    /* animation: rotation 14s infinite linear; */
+    transition: .2s;
+
+}
+
+/* @keyframes rotation {
+
+    from {
+
+      transform: rotate(0deg);
+
+    }
+
+    to {
+
+      transform: rotate(359deg);
+
+    }
+
+  } */
+
+
+.loading-hidden {
+
+    margin-top: 150px;
+    opacity: 0%;
+    transition: .2s;
+
+}
+
+.loading-done {
+
+    display: none;
+
+}
+
+/*
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+ 
+*/
+
+/* 
+       d8888  .d8888b.  88888888888  .d88888b.  8888888b.  
+      d88888 d88P  Y88b     888     d88P" "Y88b 888   Y88b 
+     d88P888 888    888     888     888     888 888    888 
+    d88P 888 888            888     888     888 888   d88P 
+   d88P  888 888            888     888     888 8888888P"  
+  d88P   888 888    888     888     888     888 888 T88b   
+ d8888888888 Y88b  d88P     888     Y88b. .d88P 888  T88b  
+d88P     888  "Y8888P"      888      "Y88888P"  888   T88b 
+*/
+
+/* ACTOR */
+
+/* UNKNOWN */
+
+.submit-button {
+
+    width: 100%;
+    height: 20px;
+    background-color: #1DA1F2;
+    color: rgb(250, 250, 250);
+
+}
+
+.submit-text {
+
+    font-size: 9pt;
+
+}
+
+/* 
+ */
+
+.actor {
+
+    margin-top: -1px;
+    padding: 10px;
+    padding-bottom: 23px;
+    width: 100%;
+    height: 30px;
+    background-color: #fcfcfc;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+}
+
+/* MESSAGE BOX */
+
+.message-box {
+
+    font-family: sans-serif;
+    background-color: #fcfcfc;
+    color: #717070;
+    padding: 10px;
+    padding-bottom: 10px;
+    font-size: 13pt;
+    width: 100%;
+    height: 40px;
+    resize: none;
+    outline: none;
+    overflow-y: auto;
+    border-radius: 10px 10px 0px 0px;
+    transition: .2s;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+.message-box-open {
+
+    font-family: sans-serif;
+    background-color: #fcfcfc;
+    color: #717070;
+    padding: 10px;
+    padding-bottom: 10px;
+    font-size: 13pt;
+    width: 100%;
+    height: 400px;
+    resize: none;
+    outline: none;
+    overflow-y: auto;
+    border-radius: 10px 10px 0px 0px;
+    transition: .2s;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+/* MEDIA PREVIEW */
+
+.actor-image-area {
+
+    padding: 0px;
+    overflow-y: scroll;
+    background-color: #fcfcfc;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+}
+
+/* EXPAND BUTTON */
+
+.toggle-expand {
+
+    position: relative;
+    float: left;
+    height: 17px;
+    margin-top: 1px;
+
+}
+
+.expand-div {
+
+    width: 30px;
+    height: 30px;
+    margin-left: 3px;
+
+}
+
+/* POST BUTTON */
+
+.post-button {
+
+    position: relative;
+    float: right;
+    height: 17px;
+    margin-left: 30px;
+    margin-top: 1px;
+    margin-right: 6px;
+
+}
+
+/* MEDIA BUTTON */
+
+.media-button {
+
+    position: relative;
+    float: right;
+    height: 17px;
+    margin-left: 30px;
+    margin-top: 1px;
+
+}
+
+/*
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+ 
+*/
+
+/* 
+8888888b.   .d88888b.   .d8888b.  88888888888  .d8888b.  
+888   Y88b d88P" "Y88b d88P  Y88b     888     d88P  Y88b 
+888    888 888     888 Y88b.          888     Y88b.      
+888   d88P 888     888  "Y888b.       888      "Y888b.   
+8888888P"  888     888     "Y88b.     888         "Y88b. 
+888        888     888       "888     888           "888 
+888        Y88b. .d88P Y88b  d88P     888     Y88b  d88P 
+888         "Y88888P"   "Y8888P"      888      "Y8888P"  
+*/
+
+/* POSTS */
+
+/* POST HEADER */
+
+.post-headers {
+
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.profile-header {
+
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+}
+
+.profile-bubble {
+
+    position: relative;
+    width: auto;
+    height: auto;
+    float: left;
+    background-color: #1DA1F2;
+    border-radius: 0px  10px 10px 10px;
+    padding-top: 7px;
+    padding-right: 10px;
+    padding-left: 9px;
+    padding-bottom: 6px;
+    margin-top: 5px;
+    
+}
+
+.profile-image {
+
+    position: relative;
+    height: 60px;
+    width: 60px;
+    float: left;
+    border-radius: 30px 30px 30px 30px;
+    margin-right: 10px;
+}
+
+.name {
+
+    position: relative;
+    float: left;
+    font-size: 15pt;
+    color: #5b5b5b;
+
+}
+
+.handle {
+
+    font-size: 9pt;
+    color: #ffffff;
+
+}
+
+/* POST BODY */
+
+.post-body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    font-size: 12pt;
+    min-height: 40px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 7px;
+    overflow-wrap: break-word;
+
+}
+
+/* POST MEDIA */
+
+.image-area {
+
+    margin-left: -12px;
+    margin-right: -14px;
+    overflow-y: auto;
+
+}
+
+/* REACTOR */
+
+.reactor {
+    width: 100%;
+    padding-top: 3px;
+    padding-bottom: 25px;
+    padding-left: 5px;
+    padding-right: 6px;
+}
+
+/* LIKE BUTTON */
+
+.like-button {
+
+    position: relative;
+    float: right;
+    height: 17px;
+    margin-top: 2px;
+    margin-left: 15px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+
+}
+
+.like-count {
+
+    position: relative;
+    float: right;
+    color: #717070;
+    height: 15px;
+    width: 30px;
+    text-align: right;
+
+}
+
+.like-count-liked {
+
+    position: relative;
+    float: right;
+    color: #1DA1F2;
+    height: 15px;
+    width: 30px;
+    text-align: right;
+
+}
+
+/* COMMENT BUTTON */
+
+.comment-button {
+
+    position: relative;
+    float: right;
+    height: 17px;
+    margin-top: 2px;
+    margin-left: 15px;
+    margin-right: 20px;
+    margin-bottom: 3px;
+
+}
+
+.comment-count {
+
+    position: relative;
+    float: right;
+    color: #717070;
+    width: 30px;
+    height: 15px;
+    text-align: right;
+
+}
+
+/*
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+ 
+*/
+
+/* 
+ .d8888b.   .d88888b.  888b     d888 888b     d888 8888888888 888b    888 88888888888  .d8888b.  
+d88P  Y88b d88P" "Y88b 8888b   d8888 8888b   d8888 888        8888b   888     888     d88P  Y88b 
+888    888 888     888 88888b.d88888 88888b.d88888 888        88888b  888     888     Y88b.      
+888        888     888 888Y88888P888 888Y88888P888 8888888    888Y88b 888     888      "Y888b.   
+888        888     888 888 Y888P 888 888 Y888P 888 888        888 Y88b888     888         "Y88b. 
+888    888 888     888 888  Y8P  888 888  Y8P  888 888        888  Y88888     888           "888 
+Y88b  d88P Y88b. .d88P 888   "   888 888   "   888 888        888   Y8888     888     Y88b  d88P 
+ "Y8888P"   "Y88888P"  888       888 888       888 8888888888 888    Y888     888      "Y8888P"  
+*/
+
+/* COMMENTS */
+
+/* COMMENT HEADER */
+
+.comment-headers {
+
+    position: relative;
+    max-width: 100%;
+    margin-bottom: 10px;
+
+}
+
+.comment-profile-header {
+
+    margin-top: 5px;
+    width: 100%;
+    height: 60px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+
+}
+
+.comment-profile-bubble {
+
+    position: relative;
+    width: auto;
+    height: auto;
+    float: left;
+    background-color: #1DA1F2;
+    border-radius: 0px  10px 10px 10px;
+    padding-top: 7px;
+    padding-right: 10px;
+    padding-left: 9px;
+    padding-bottom: 6px;
+    margin-top: 5px;
+    
+}
+
+.comment-profile-image {
+
+    position: relative;
+    height: 60px;
+    width: 60px;
+    float: left;
+    border-radius: 30px 30px 30px 30px;
+    margin-right: 10px;
+}
+
+.comment-name {
+
+    position: relative;
+    float: left;
+    font-size: 15pt;
+    color: #5b5b5b;
+
+}
+
+.comment-handle {
+
+    font-size: 9pt;
+    color: #ffffff;
+
+}
+
+/* COMMENT BODY */
+
+.comment-body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    font-size: 12pt;
+    min-height: 40px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 5px;
+    padding-right: 7px;
+    overflow-wrap: break-word;
+
+}
+
+/* COMMENT MEDIA */
+
+.comment-image-area {
+
+    margin-left: -12px;
+    margin-right: -14px;
+    overflow-y: auto;
+
+}
+
+/* REACTOR */
+
+.comment-reactor {
+    width: 100%;
+    padding-top: 3px;
+    padding-bottom: 25px;
+    padding-left: 5px;
+    padding-right: 6px;
+}
+
+/*
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+ 
+*/
+
+/* 
+888b    888        d8888 888     888 
+8888b   888       d88888 888     888 
+88888b  888      d88P888 888     888 
+888Y88b 888     d88P 888 Y88b   d88P 
+888 Y88b888    d88P  888  Y88b d88P  
+888  Y88888   d88P   888   Y88o88P   
+888   Y8888  d8888888888    Y888P    
+888    Y888 d88P     888     Y8P      
+*/
+
+/* NAVIGATION */
+
+.navigation-panel {
+
+    position: fixed;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1000px;
+    height: 50px;
+    color: #717070;
+    border-radius: 13px 13px 13px 13px;
+    background-color: #fcfcfc;
+    border: 0.2px outset #f0f0f0;
+    margin-bottom: 0px;
+    transition: .15s;
+    z-index: 1004;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+
+}
+
+.navigation-panel-hidden {
+
+    position: fixed;
+    padding: 10px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1000px;
+    height: 50px;
+    color: #717070;
+    border-radius: 13px 13px 13px 13px;
+    background-color: #ffffff;
+    border: 0.2px outset #f0f0f0;
+    -webkit-box-shadow: inset 0 0 1px #c1c1c1;
+    -moz-box-shadow: inset 0 0 1px #c1c1c1;
+    box-shadow: inset 0 0 1px #c1c1c1;
+    margin-bottom: -80px;
+    transition: .15s;
+    z-index: 1004;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
+
+}
+
+/* RIGHT ORIENTATION */
+
+.connect-button {
+
+    position: relative;
+    float: right;
+    height: 25px;
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 20px;
+    padding-top: 5px;
+
+}
+
+.logout-button {
+
+    position: relative;
+    float: right;
+    height: 25px;
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 20px;
+    padding-top: 5px;
+
+}
+
+.home-button {
+
+    position: relative;
+    float: right;
+    height: 25px;
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 10px;
+    padding-top: 5px;
+
+}
+
+.left-hand {
+
+    position: relative;
+    float: left;
+    height: 25px;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 10px;
+    padding-top: 3px;
+
+}
+
+/* LEFT ORIENTATION */
+
+.connect-button-left {
+
+    position: relative;
+    float: left;
+    height: 25px;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 20px;
+    padding-top: 5px;
+
+}
+
+.logout-button-left {
+
+    position: relative;
+    float: left;
+    height: 25px;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 20px;
+    padding-top: 5px;
+
+}
+
+.home-button-left {
+
+    position: relative;
+    float: left;
+    height: 25px;
+    border-radius: 5px 5px 5px 5px;
+    margin-left: 10px;
+    padding-top: 5px;
+
+}
+
+.right-hand {
+
+    position: relative;
+    float: right;
+    height: 25px;
+    border-radius: 5px 5px 5px 5px;
+    margin-right: 10px;
+    padding-top: 3px;
+
+}
+
+/*
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+ 
+*/
+
+/* 
+ .d8888b.  8888888888        d8888 8888888b.   .d8888b.  888    888 
+d88P  Y88b 888              d88888 888   Y88b d88P  Y88b 888    888 
+Y88b.      888             d88P888 888    888 888    888 888    888 
+ "Y888b.   8888888        d88P 888 888   d88P 888        8888888888 
+    "Y88b. 888           d88P  888 8888888P"  888        888    888 
+      "888 888          d88P   888 888 T88b   888    888 888    888 
+Y88b  d88P 888         d8888888888 888  T88b  Y88b  d88P 888    888 
+ "Y8888P"  8888888888 d88P     888 888   T88b  "Y8888P"  888    888  
+ */
+
+/* SEARCH */
+
+.search-panel {
+
+    background-color: #fcfcfc;
+    padding-left: 10px;
+    padding-top: 15px;
+    padding-right: 50px;
+    font-size: 13pt;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1000px;
+    height: 50px;
+    border-radius: 13px 13px 13px 13px;
+    border: 0.2px outset #f0f0f0;
+    margin-bottom: 0px;
+    transition: .2s;
+    z-index: 998;
+
+}
+
+.search-panel-hidden {
+
+    background-color: #fcfcfc;
+    padding: 10px;
+    padding-top: 14px;
+    padding-right: 50px;
+    font-size: 13pt;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 1000px;
+    height: 50px;
+    border-radius: 13px 13px 13px 13px;
+    border: 0.2px outset #f0f0f0;
+    margin-bottom: -80px;
+    z-index: 998;
+    transition: .2s;
+
+}
+
+.search-text {
+
+    resize: none;
+    outline: none;
+    overflow-y: auto;
+    font-family: sans-serif;
+    font-size: 13pt;
+    color: #717070;
+    background-color: #fcfcfc;
+    width: 100%;
+    max-width: 1000px;
+    height: 23px;
+    z-index: 998;
+
+}
+
+.close-search {
+
+    position: relative;
+    width: 17px;
+    float: right;
+    margin-right: -30px;
+    margin-top: -21px;
+    z-index: 999;
+
+}
+
+/*
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+ 
+*/
+
+/* 
+       d8888 8888888b.  8888888b.            
+      d88888 888  "Y88b 888  "Y88b           
+     d88P888 888    888 888    888           
+    d88P 888 888    888 888    888           
+   d88P  888 888    888 888    888           
+  d88P   888 888    888 888    888           
+ d8888888888 888  .d88P 888  .d88P           
+d88P     888 8888888P"  8888888P"            
+                                             
+                                             
+                                             
+888     888  .d8888b.  8888888888 8888888b.  
+888     888 d88P  Y88b 888        888   Y88b 
+888     888 Y88b.      888        888    888 
+888     888  "Y888b.   8888888    888   d88P 
+888     888     "Y88b. 888        8888888P"  
+888     888       "888 888        888 T88b   
+Y88b. .d88P Y88b  d88P 888        888  T88b  
+ "Y88888P"   "Y8888P"  8888888888 888   T88b 
+*/
+
+/* ADD USER */
+
+.conn-hidden {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1000px;
+    height: 0px;
+    color: #717070;
+    border-radius: 13px 13px 13px 13px;
+    overflow-y: scroll;
+    z-index: 1003;
+    transition: .1s;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+
+}
+
+.conn-visible {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-width: 1000px;
+    height: 100%;
+    color: #717070;
+    padding-top: 25px;
+    padding-bottom: 15px;
+    overflow-y: scroll;
+    transition: .1s;
+    z-index: 1003;
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    
+
+}
+
+.qr-code {
+
+    opacity: 100%;
+    height: auto;
+    transition: .2s;
+    transition-delay: .1s;
+    
+}
+
+.invis {
+
+    opacity: 0%;
+    height: 0px;
+    transition: .2s;
+
+}
+
+.connect-avi {
+
+    position: relative;
+    height: 150px;
+    border-radius: 90px 90px 90px 90px;
+    margin: 10px;
+    margin-top: -25px;
+    opacity: inherit;
+    z-index: inherit;
+
+}
+
+.connect-handle {
+
+    font-size: 12pt;
+    color: #717070;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    opacity: inherit;
+
+}
+
+.connect-code {
+
+    font-size: 12pt;
+    resize: none;
+    color: #717070;
+    width: 80%;
+    height: 80px;
+    outline: none;
+    border-radius: 13px 13px 13px 13px;
+    overflow-wrap: break-word;
+    margin-top: 13px;
+    margin-bottom: 5px;
+    opacity: inherit;
+    
+}
+
+.connect-message {
+
+    font-size: 12pt;
+    color: #717070;
+    margin-top: 17px;
+    opacity: inherit;
+
+}
+
+.connect-paste {
+
+    position: relative;
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px;
+    width: 120px;
+    margin: 25px;
+    margin-top: 15px;
+    background-color: #1DA1F2;
+    color: rgb(250, 250, 250);
+    opacity: inherit;
+    margin-bottom: 40px;
+    transition: .2s;
+
+}
+
+.connect-paste-waiting {
+
+    position: relative;
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px;
+    width: 120px;
+    margin: 25px;
+    margin-top: 15px;
+    background-color: #ebebeb;
+    color: rgb(250, 250, 250);
+    opacity: inherit;
+    margin-bottom: 40px;
+    transition: .2s;
+
+}
+
+/*
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+ 
+*/
+
+/* 
+888       .d88888b.         d8888 8888888b.  8888888 888b    888  .d8888b.  
+888      d88P" "Y88b       d88888 888  "Y88b   888   8888b   888 d88P  Y88b 
+888      888     888      d88P888 888    888   888   88888b  888 888    888 
+888      888     888     d88P 888 888    888   888   888Y88b 888 888        
+888      888     888    d88P  888 888    888   888   888 Y88b888 888  88888 
+888      888     888   d88P   888 888    888   888   888  Y88888 888    888 
+888      Y88b. .d88P  d8888888888 888  .d88P   888   888   Y8888 Y88b  d88P 
+88888888  "Y88888P"  d88P     888 8888888P"  8888888 888    Y888  "Y8888P88 
+                                                                            
+                                                                            
+                                                                            
+8888888b.   .d88888b.  88888888888  .d8888b.                                
+888  "Y88b d88P" "Y88b     888     d88P  Y88b                               
+888    888 888     888     888     Y88b.                                    
+888    888 888     888     888      "Y888b.                                 
+888    888 888     888     888         "Y88b.                               
+888    888 888     888     888           "888                               
+888  .d88P Y88b. .d88P     888     Y88b  d88P                               
+8888888P"   "Y88888P"      888      "Y8888P"                                 
+*/
+
+/* LOADING DOTS */
+
+.dot-elastic {
+
+    position: relative;
+    margin-top: 177px;
+    margin-bottom: 178px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #1DA1F2;
+    color: #1DA1F2;
+    animation: dotElastic 1s infinite linear;
+
+  }
+  
+  .dot-elastic::before, .dot-elastic::after {
+
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+
+  }
+  
+  .dot-elastic::before {
+
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #1DA1F2;
+    color: #1DA1F2;
+    animation: dotElasticBefore 1s infinite linear;
+
+  }
+  
+  .dot-elastic::after {
+
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: #1DA1F2;
+    color: #1DA1F2;
+    animation: dotElasticAfter 1s infinite linear;
+
+  }
+  
+  @keyframes dotElasticBefore {
+
+    0% {
+
+      transform: scale(1, 1);
+
+    }
+
+    25% {
+
+      transform: scale(1, 1.5);
+
+    }
+
+    50% {
+
+      transform: scale(1, 0.67);
+
+    }
+
+    75% {
+
+      transform: scale(1, 1);
+
+    }
+
+    100% {
+
+      transform: scale(1, 1);
+
+    }
+
+  }
+  
+  @keyframes dotElastic {
+
+    0% {
+
+      transform: scale(1, 1);
+
+    }
+
+    25% {
+
+      transform: scale(1, 1);
+
+    }
+
+    50% {
+
+      transform: scale(1, 1.5);
+
+    }
+
+    75% {
+
+      transform: scale(1, 1);
+
+    }
+
+    100% {
+
+      transform: scale(1, 1);
+
+    }
+
+  }
+  
+  @keyframes dotElasticAfter {
+
+    0% {
+
+      transform: scale(1, 1);
+
+    }
+
+    25% {
+
+      transform: scale(1, 1);
+
+    }
+
+    50% {
+
+      transform: scale(1, 0.67);
+
+    }
+
+    75% {
+
+      transform: scale(1, 1.5);
+
+    }
+
+    100% {
+
+      transform: scale(1, 1);
+
+    }
+
+  }
+  
+/*
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+ 
+*/
+
+/* 
+ .d8888b.  8888888b.         d8888  .d8888b.  8888888888 8888888b.   .d8888b.  
+d88P  Y88b 888   Y88b       d88888 d88P  Y88b 888        888   Y88b d88P  Y88b 
+Y88b.      888    888      d88P888 888    888 888        888    888 Y88b.      
+ "Y888b.   888   d88P     d88P 888 888        8888888    888   d88P  "Y888b.   
+    "Y88b. 8888888P"     d88P  888 888        888        8888888P"      "Y88b. 
+      "888 888          d88P   888 888    888 888        888 T88b         "888 
+Y88b  d88P 888         d8888888888 Y88b  d88P 888        888  T88b  Y88b  d88P 
+ "Y8888P"  888        d88P     888  "Y8888P"  8888888888 888   T88b  "Y8888P"  
+*/
+
+/* SPACERS */
+
+.spacer {
+
+    width: 100%;
+    margin-bottom: 40px;
+
+}
+
+.small-spacer {
+
+    width: 100%;
+    margin-top: 20px;
+
+}
+
+.smallest-spacer {
+
+    width: 100%;
+    margin-top: 8px;
+
+}
+
+.big-spacer {
+
+    width: 100%;
+    margin-top: 65px;
+    
+}
+
+/*
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+ 
+*/

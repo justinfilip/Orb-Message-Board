@@ -1,0 +1,386 @@
+/* 
+ .d8888b.  888       .d88888b.  888888b.          d8888 888      
+d88P  Y88b 888      d88P" "Y88b 888  "88b        d88888 888      
+888    888 888      888     888 888  .88P       d88P888 888      
+888        888      888     888 8888888K.      d88P 888 888      
+888  88888 888      888     888 888  "Y88b    d88P  888 888      
+888    888 888      888     888 888    888   d88P   888 888      
+Y88b  d88P 888      Y88b. .d88P 888   d88P  d8888888888 888      
+ "Y8888P88 88888888  "Y88888P"  8888888P"  d88P     888 88888888  
+*/
+
+/* GLOBAL */
+
+* {
+
+    display: block;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* border: 1px solid #ff0000; */
+    touch-action: manipulation;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+.none {
+
+    display: none;
+
+}
+
+.hidden {
+    opacity: 0%;
+    height: 0px;
+}
+
+html body {
+
+    /* background-color: #ffffff; */
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    font-weight: 350;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    color: #717070;
+    
+}
+
+textarea {
+
+    border-style: none;
+    border-color: Transparent;
+    overflow: auto;
+
+}
+
+/* CONTAINERS */
+
+.global-east-panel {
+
+    position: relative;
+    height: 100%;
+    opacity: 100%;
+    overflow: auto;
+    padding-top: 45px;
+    padding-bottom: 55px;
+    transition: .3s;
+
+}
+
+.global-east-panel-hidden {
+
+    position: relative;
+    height: 0px;
+    opacity: 0%;
+    overflow: auto;
+    padding-top: 85px;
+    padding-bottom: 55px;
+    transition: .3s;
+
+}
+
+/*
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+ 
+*/
+
+/* 
+888888  .d88888b.  8888888 888b    888        
+  "88b d88P" "Y88b   888   8888b   888        
+   888 888     888   888   88888b  888        
+   888 888     888   888   888Y88b 888        
+   888 888     888   888   888 Y88b888        
+   888 888     888   888   888  Y88888        
+   88P Y88b. .d88P   888   888   Y8888        
+   888  "Y88888P"  8888888 888    Y888        
+ .d88P                                        
+.d88P"                                         
+888P"
+
+8888888888  .d88888b.  8888888b.  888b     d888 
+888        d88P" "Y88b 888   Y88b 8888b   d8888 
+888        888     888 888    888 88888b.d88888 
+8888888    888     888 888   d88P 888Y88888P888 
+888        888     888 8888888P"  888 Y888P 888 
+888        888     888 888 T88b   888  Y8P  888 
+888        Y88b. .d88P 888  T88b  888   "   888 
+888         "Y88888P"  888   T88b 888       888  
+*/
+
+.join-header {
+
+   margin-bottom: 45px; 
+
+}
+
+.join-avi {
+    background-color: #ebebeb;
+    position: relative;
+    padding: 1px;
+    height: 150px;
+    width: 150px;
+    border-radius: 90px 90px 90px 90px;
+    z-index: 999;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.pick-avi-button {
+
+    position: relative;
+    height: 17px;
+    margin-top: 125px;
+    margin-bottom: -122px;
+    justify-content: center;
+    z-index: 1000;
+
+}
+
+.pick-avi-button-hidden {
+    opacity: 0%;
+    height: 0px;
+    margin-top: -28px;
+}
+
+.join-textarea {
+
+    margin-top: -0.5px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+    width: 100%;
+    max-width: 300px;
+    height: 25px;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    resize: none;
+    outline: none;
+    font-size: 12pt;
+    color: #717070;
+    border: 0.5px solid #ababab;
+    border-radius: 13px 13px 13px 13px;
+    opacity: 100%;
+
+}
+
+.join-textarea-blur {
+
+    margin-top: 6px;
+    margin-bottom: 5.5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 99%;
+    max-width: 300px;
+    height: 13px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    resize: none;
+    outline: none;
+    font-size: 11pt;
+    color: #ababab;
+    border-radius: 13px 13px 13px 13px;
+    filter: blur(3px);
+    border: 0.5px solid #ababab;
+    opacity: 80%;
+
+}
+
+.join-textarea-blur-error {
+
+    margin-top: 6px;
+    margin-bottom: 5.5px;
+    margin-left: 2px;
+    margin-right: 2px;
+    width: 99%;
+    max-width: 300px;
+    height: 13px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    resize: none;
+    outline: none;
+    font-size: 11pt;
+    color: #ce0000;
+    border-radius: 13px 13px 13px 13px;
+    filter: blur(3px);
+    border: 0.5px solid #ce0000;
+    opacity: 100%;
+
+}
+
+.join-textarea-username {
+
+    width: 100%;
+    height: 100%;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    resize: none;
+    outline: none;
+    font-size: 12pt;
+    color: #717070;
+    overflow: scroll;
+    border-radius: 13px 13px 13px 13px;
+    border: 0.5px solid #ababab;
+    transition: .1s;
+    
+}
+
+.join-textarea-display-name {
+
+    width: 100%;
+    height: 100%;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    resize: none;
+    outline: none;
+    font-size: 12pt;
+    color: #717070;
+    overflow: scroll;
+    border-radius: 13px 13px 13px 13px;
+    border: 0.5px solid #ababab;
+    transition: .1s;
+    
+}
+
+.join-input {
+
+    position: relative;
+    width: 60%;
+    max-width: 300px;
+    height: 25px;
+    background-color: #fcfcfc;
+    border-radius: 13px 13px 13px 13px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    opacity: inherit;
+    border: 0.5px solid #ababab;
+
+}
+
+.join-input-username {
+
+    position: relative;
+    width: 60%;
+    max-width: 300px;
+    height: 25px;
+    background-color: #fcfcfc;
+    border-radius: 13px 13px 13px 13px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    opacity: inherit;
+
+}
+
+.join-input-display-name {
+
+    position: relative;
+    width: 60%;
+    max-width: 300px;
+    height: 25px;
+    background-color: #fcfcfc;
+    border-radius: 13px 13px 13px 13px;
+    margin-top: 10px;
+    margin-bottom: 50px;
+    opacity: inherit;
+
+}
+
+.join-button {
+
+    position: relative;
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px;
+    width: 120px;
+    margin: 25px;
+    margin-top: 50px;
+    background-color: #1DA1F2;
+    color: rgb(250, 250, 250);
+    opacity: inherit;
+    margin-bottom: 40px;
+    transition: .2s;
+
+}
+
+.join-button-loading {
+
+    position: relative;
+    border-radius: 20px 20px 20px 20px;
+    padding: 10px;
+    width: 120px;
+    margin: 25px;
+    margin-top: 50px;
+    background-color: #ebebeb;
+    color: rgb(250, 250, 250);
+    opacity: inherit;
+    margin-bottom: 40px;
+    transition: .2s;
+
+}
+
+.join-char-guide {
+
+    float: left;
+    font-size: 8pt;
+    color: #717070;
+    margin-top: 5px;
+    margin-left: 4px;
+
+}
+
+/*
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+
+//
+ 
+*/

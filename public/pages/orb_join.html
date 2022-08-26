@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<meta charset="UTF-8">
+
+<head>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <link type="text/css" href="{}" rel="stylesheet" />
+    
+</head>
+
+<html>
+
+    <body>
+        
+        <div id="global-east-panel" class="global-east-panel">
+            <center>
+
+                <div class="join-header">
+                    <b>Join this Orb</b>
+                </div>
+
+                <input type="file" name="image" id="file" style="display: none;"></input>
+                <label for="file">
+                    <img id="pick-avi-button" class="pick-avi-button" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAACXBIWXMAAAsTAAALEwEAmpwYAAAE5ElEQVRogdXaaaxdUxTA8d+77xWlYgjSVEmJRE2JSMxptEnNQijaUlNIo4RW0Nb0RWOeqoaKIaI0FC0i5jniA0VMwQdiipCYEuUpqvVhnePuc71737nnvb73+v9y9tp3n33XOuvstdde93ZMnz5dwgE4A3tjpKHJT3gL9+HpvLMrGTAfMwdWp0psjDE4HotwCnVD5vu/Ed1YjY4BUa931qCGDZO+k7EBJndhL0UjFuEGfGNoGjISM3BO1n88FndhTjL4IZmrhjC/4Fz8g1lZ3+wa9kkGnT/ASvWFC/Fn1h7bhc0yoRs/l5hgE5yEidgmm+w9PI7n+1HR3lglXv8dMLxLuIhYD+tjZYubJ+NWbNHQv694b5/Cqfix//Rtyer8WhOLiFjUrRb22WINNRqRcjjeV/fy2qaWXdfUWg6rs7PwRM4nOB17YryIcjmjhGcGlK7eh4Dbk/ZLYn2kvCaUfzmT98Vhkp13bVPGI6NF6gJ/4agm417BvESe0Qe92qaMIbsn7Wfxe4uxd6mvuV0q6lSJMoZslLS/6WXsz+qRZL1KGlWkjCHfJu39exm7Gzqz9i+VNKpIGUPeFWuDeM0ObjH2yqT9SkWdKlHGkG7F8LoUhzaMGY5bMCHpu6lvqrVH2fB7KaaJlGQjEVZfF6nJCGFYehC7CF9U0GeKCNudIqTfWfbGsoasxji8KHIbmTyuh7ELcHVZBRKWiJQ85wRMVfRyU8ru7PCVCKkL9ByC3xNPtMop8xlFI3LGK5kllPVIzl9C0XkiPRkjkswP8Xabc+U8hkMSeRZW4J5MPgxX4JJWk7RrSM6P4in2lWcVo+BM4XHYHNdl7YvxDpY1m6idV6u/WaZoxIXqRsD1eDiRl2LHZpMNliFP4uhEPlco3shkfJTIr2JYTxMOhiFLcUQiXyD2oGaMx69Ze6TiKTTPIgbckGdwTCKfpbjZ9sRPiseG8bgqa3fnnVUM2QrbV7j3UcXoNBsLS967XBidM1fsM1/mHe0os6lYfF/h82yS80re+zQmJfJM9YhUloW4I5EXS5LYsoaMFWfx40Rlj0hXbhQFvVYsU8zN5ipGp3aYIeq+OZvmjTKGHIUPsG3S92nSPglv6Lko8YRidJqFa0p8Zysm4PvGzt4MOVPUq/KQt0KUWHdSX3Cwn/DYHknfIzgykefg5nY0bkI3DmzsbDSkM2nfprgYPxa51vJMvlgsuJxRYvedhrtxbPLZObi2itZN+EjkdXlNrmDIMBHqiPc6jRIviENV41H3QVFyTU+D94tSUc5sxVJSf7FEk6j1NbYTJZ30vb4FB+HvJhO+KTz1Zg+fnaf96NQOq/JGasgmwmVp/j9XpA+98Z3wzJKGe+dXVrEc/y2FNPvdsmHQJC2yzSZMwXP4TSz2AaOnNP4HEfffqTjnvdXVqU5j1FouSjpVjRg0Uo+sFKXRPwZJlz6ReuRvzSPTkKfW0B4xWIr0lcE86vYrNfVfqdaoV9LXFfKCeUdNfVOpqdd41xVyJ9Rq6ufh4Yo/IawLbJ1d/6yp7xkduHxw9KnEZep/5/ispnj4nyEOPqMHWqs22EoUydOHvqAj+5vTAzgx+eAfcTZfZehEttViPY8W/wfIeQkT8519mlB4aiZ3ikrJUOc5WWUmTVFOEAXl07Cr5GA/xFghfudfLElQ/wXdMuSjj21MYQAAAABJRU5ErkJggg=="></img>
+                </label>
+
+                <div id="join-avi-container">
+                    <b>Choose a profile picture:</b>
+                    <img id="join-avi" class="join-avi" src=""></img>
+                </div>
+                
+                <div class="join-input-username">
+
+                    <textarea id="join-input-username" class="join-textarea-username" placeholder="Username" maxlength="15" spellcheck="false"></textarea>
+                    <div class="join-char-guide">
+                        <p>Allowed: _ 0-9 a-z A-Z, max: 15</p>
+                    </div>
+
+                </div>
+
+                <div class="join-input-display-name">
+
+                    <textarea id="join-input-display-name" class="join-textarea-display-name" placeholder="Display Name" maxlength="32" spellcheck="false"></textarea>
+                    <div class="join-char-guide">
+                        <p>Allowed: Any, max: 32</p>
+                    </div>
+
+                </div>
+                
+
+                <div class="join-input">
+
+                    <textarea id="join-input-password" class="join-textarea" placeholder="Password" minlength="8" maxlength="32" spellcheck="false" autocomplete="off"></textarea>
+
+                </div>
+
+                <div class="join-input">
+
+                    <textarea id="join-input-pass-confirm" class="join-textarea" placeholder="Confirm Password" minlength="8" maxlength="32" spellcheck="false" autocomplete="off"></textarea>
+                    <div class="join-char-guide">
+                        <p>Allowed: Any character, minimum: 8, max: 32</p>
+                    </div>
+
+                </div>
+
+                <div id="join-button" class="join-button"><b>Join</b></div>
+
+            </center>
+
+        </div>
+
+    </body>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{}"></script>
+    <div id="temp-code" class="hidden">{}</div>
+</html>
