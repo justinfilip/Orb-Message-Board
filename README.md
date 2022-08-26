@@ -1,8 +1,6 @@
 # Orb Message Board
 ### A Self-hosted, Tor secured, privacy first, invite only message board.
 
-Orb Message Board was born out of a desire for a way to communicate with people securely and privately. I don't want to have to trust that apps like Signal, WhatsApp, Telegram, etc.. have my best interest in mind. Companies who offer free apps are notorious for capturing and selling your data.
-
 #### Recommended minimum host machine specifications:
 
 1 core processor
