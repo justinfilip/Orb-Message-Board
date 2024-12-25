@@ -1,0 +1,8 @@
+[Unit]
+After=network.service
+
+[Service]
+ExecStart=/root/Orb-Message-Board/system_resources/system_lord.sh
+
+[Install]
+WantedBy=default.target
